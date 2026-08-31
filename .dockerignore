@@ -1,0 +1,12 @@
+node_modules
+.next
+.git
+.gitignore
+.agent-cache
+*.ps1
+*.log
+npm-debug.log*
+Dockerfile
+.dockerignore
+README.md
+DEPLOYMENT.md
