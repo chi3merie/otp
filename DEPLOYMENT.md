@@ -22,6 +22,9 @@ need to self-host.
 **Key implication:** because there is no server-side database or API, this app has zero
 external dependencies and can be deployed anywhere in minutes.
 
+The repository includes a Render Blueprint at `render.yaml`. It deploys the existing
+multi-stage Docker image as a free web service and uses `/` as its health check.
+
 ### Architecture at a glance
 
 ```
@@ -114,10 +117,32 @@ docker push <your-registry>/pharmacystore:latest
 Then run it anywhere that accepts containers: **Fly.io, Google Cloud Run, Render,
 DigitalOcean**, or Kubernetes (a plain Deployment with `containerPort: 3000` works).
 
+---
+
+## 5. Render Blueprint
+
+1. Push the repository to GitHub:
+
+   ```bash
+   git add -A
+   git commit -m "Configure Render deployment"
+   git push origin master
+   ```
+
+2. Open [render.com](https://render.com), sign in with GitHub, and choose **New -> Blueprint**.
+
+3. Select the `chi3merie/otp` repository. Render reads `render.yaml` and creates the
+   `pharmacystore` web service automatically.
+
+4. Click **Apply**. Render builds the Dockerfile, assigns the service `PORT`, and deploys
+   the app. No environment variables are required.
+
+5. Open the generated `onrender.com` URL and verify `/`, `/all`, and a product detail page.
+
 
 ---
 
-## 5. Path C — VPS / Bare Node.js server (e.g., Ubuntu on DigitalOcean/AWS)
+## 6. Path C — VPS / Bare Node.js server (e.g., Ubuntu on DigitalOcean/AWS)
 
 > Prerequisite: Node.js 20+ installed on the server.
 
@@ -176,7 +201,7 @@ Then add free TLS with: `sudo certbot --nginx` (Let's Encrypt).
 
 ---
 
-## 6. After Deployment
+## 7. After Deployment
 
 | Task | How |
 |---|---|
@@ -186,7 +211,7 @@ Then add free TLS with: `sudo certbot --nginx` (Let's Encrypt).
 | Updates | Push to `master` (Vercel redeploys) or rebuild the Docker image |
 | Rollback | Vercel: Deployments → previous → **Promote to Production** |
 
-## 7. Troubleshooting
+## 8. Troubleshooting
 
 | Symptom | Fix |
 |---|---|

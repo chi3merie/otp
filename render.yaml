@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: pharmacystore
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    plan: free
+    healthCheckPath: /
+    autoDeployTrigger: commit
