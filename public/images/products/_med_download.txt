@@ -1,9 +1,0 @@
-Paracetamol : ERR The remote name could not be resolved: 'upload.wikimedia.org'
-Ibuprofen : ERR The remote name could not be resolved: 'upload.wikimedia.org'
-Aspirin : ERR The remote name could not be resolved: 'upload.wikimedia.org'
-Cetirizine : ERR The remote name could not be resolved: 'upload.wikimedia.org'
-Amoxicillin : ERR The remote name could not be resolved: 'upload.wikimedia.org'
-Metformin : ERR The remote name could not be resolved: 'upload.wikimedia.org'
-Omeprazole : NO_THUMB
-Vitamin C : ERR The remote server returned an error: (403) Forbidden.
-----

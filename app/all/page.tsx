@@ -13,7 +13,7 @@ export default function AllProductsPage() {
         </Link>
         <nav className="nav-links" aria-label="Main navigation">
           <Link href="/">Home</Link>
-          <Link href="/#shop">Shop</Link>
+          <Link href="/#shop">All products</Link>
           <Link href="/#services">Services</Link>
           <Link href="/#delivery">Delivery</Link>
         </nav>

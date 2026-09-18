@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 
+import AuthStatus from "./auth-status";
 import {
   careSteps,
   categories,
@@ -67,9 +68,10 @@ export default function Home() {
           <a href="#delivery">Delivery</a>
           <a href="#visit">Visit</a>
         </nav>
-        <a className="header-action" href="#cart">
+        <a className="header-action cart-link" href="#cart">
           Cart ({cartItems.length})
         </a>
+        <AuthStatus />
       </header>
 
       <section id="top" className="hero-section">

@@ -55,7 +55,7 @@ export default function DeskManagerPage() {
         <nav className="nav-links" aria-label="Main navigation">
           <Link href="/">Home</Link>
           <Link href="/admin">Admin</Link>
-          <Link href="/all">Products</Link>
+          <Link href="/all">All Products</Link>
           <Link href="/#services">Services</Link>
         </nav>
 
